@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Food Products</title>
+  </head>
+  <body>
+    <script>
+      // Define an array of 5 food products
+      let foodProducts = ["Burger", "Pizza", "Fries", "Chicken Sandwich", "Hot Dog"];
+
+      // Ask user for input to select the product
+      let selectedProductIndex = +prompt("Select the product to remove (Enter 1-5):\n1. Burger\n2. Pizza\n3. Fries\n4. Chicken Sandwich\n5. Hot Dog");
+
+      // Check if the selected index is valid
+      if (selectedProductIndex < 1 || selectedProductIndex > 5) {
+        alert("Invalid selection. Please try again.");
+      } else {
+        // Remove the selected product from the array
+        let removedProduct = foodProducts.splice(selectedProductIndex - 1, 1);
+
+        // Display the removed product and remaining products
+        alert(`Removed product: ${removedProduct}\nRemaining products: ${foodProducts}\nTotal number of items remaining: ${foodProducts.length}`);
+      }
+    </script>
+  </body>
+</html>

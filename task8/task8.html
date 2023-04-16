@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Team Selection for Match</title>
+  </head>
+  <body>
+    <h1>Team Selection for Match</h1>
+    <p>Click the button below to see the selected team.</p>
+    <button onclick="selectTeam()">Show Selected Team</button>
+    <script>
+      let WorldCupSquad = ['Babar Azam', 'Fakhar Zaman', 'Imam-ul-Haq', 'Shan Masood', 'Haris Sohail', 'Mohammad Rizwan', 'Sarfraz Ahmed', 'Shadab Khan', 'Imad Wasim', 'Faheem Ashraf', 'Shaheen Afridi', 'Hasan Ali', 'Mohammad Amir', 'Wahab Riaz', 'Usman Shinwari'];
+
+      let teamForMatch = [...WorldCupSquad];
+
+      while (teamForMatch.length > 11) {
+        let randomIndex = +Math.random() * teamForMatch.length;
+        teamForMatch.splice(randomIndex, 1);
+      }
+
+      function selectTeam() {
+        let selectedPlayers = teamForMatch.join(', ');
+        alert('The selected players for tomorrow\'s match are: ' + selectedPlayers);
+      }
+    </script>
+  </body>
+</html>

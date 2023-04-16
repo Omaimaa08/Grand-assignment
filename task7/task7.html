@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Voting Eligibility Check</title>
+  </head>
+  <body>
+    <script>
+      // Ask user for input
+      let nationality = prompt("What is your nationality?");
+      let gender = prompt("What is your gender?");
+      let age = +prompt("What is your age?");
+  // Check eligibility to vote
+  let isEligible = false;
+
+  if (nationality === "Pakistani" || nationality === "Indian") {
+    if (gender === "male" && age >= 18) {
+      isEligible = true;
+    } else if (gender === "female" && age >= 18) {
+      let married = prompt("Are you married? (yes/no)");
+      if (married === "yes") {
+        isEligible = true;
+      }
+    }
+  }
+
+  // Display result to user
+  if (isEligible) {
+    alert("You are eligible to vote.");
+  } else {
+    alert("You are not eligible to vote.");
+  }
+</script>
+</body>
+</html>

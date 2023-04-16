@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fitrah Calculator</title>
+</head>
+<body>
+	<script>
+		// Get number of family members
+		var familyMembers = +prompt("Please enter the total number of family members:");
+	// Get fitrah method
+	var fitrahMethod = prompt("Please choose a fitrah method: \n1. Basic Fitrah - PKR 250 per person \n2. Full Fitrah - PKR 450 per person \n3. Moderate Fitrah - PKR 2100 per person \n4. Premium Fitrah - PKR 2800 per person");
+
+	// Calculate fitrah amount based on selected method 
+	var fitrahAmount;
+
+	if (fitrahMethod === "1") {
+		fitrahAmount = 250;
+	} else if (fitrahMethod === "2") {
+		fitrahAmount = 450;
+	} else if (fitrahMethod === "3") {
+		fitrahAmount = 2100;
+	} else if (fitrahMethod === "4") {
+		fitrahAmount = 2800;
+	} else {
+		alert("Invalid selection. Please try again.");
+	}
+
+	// Calculate total fitrah amount 
+	var totalFitrahAmount = fitrahAmount * familyMembers;
+
+	// Display fitrah amount to user
+	if (totalFitrahAmount) {
+		alert(`Your total Fitrah amount is PKR ${totalFitrahAmount.toFixed(2)}`);
+	}
+</script>
+</body>
+</html>

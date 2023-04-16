@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact Information</title>
+  </head>
+  <body>
+    <script>
+      // Create empty arrays to store contact numbers and names
+      var contactNumbers = [];
+      var contactNames = [];
+  // Loop to ask user for contact info and push it to the arrays
+  for (var i = 0; i < 3; i++) { // Change the number in the loop condition to add more contacts
+
+    
+    var number = prompt(`Enter contact number ${i + 1}:`);
+    var name = prompt(`Enter contact name ${i + 1}:`);
+    contactNumbers.push(number);
+    contactNames.push(name);
+  }
+
+  // Loop to display the contact numbers and names in the console
+  for (var i = 0; i < contactNumbers.length; i++) {
+    console.log(`Contact ${i + 1}: ${contactNumbers[i]} (${contactNames[i]})`);
+  }
+</script>
+</body>
+</html>
